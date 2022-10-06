@@ -1,0 +1,9 @@
+/* app global css */
+
+.text-mordicom {
+    color: var(--q-mordicom) !important;
+}
+
+.bg-mordicom {
+    background: var(--q-mordicom) !important;
+}

@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // function isAdmin() {
+    //   return request.auth.token.admin == true ||
+    //          request.auth.token.owner == true;
+    // }
+
+    // function isAuthenticated() {
+    //   return request.auth.uid != null;
+    // }
+
+    match /{document=**} {
+      allow read, write: if false;
+      match /userData/{tenantId} {
+        allow read, write: if false;
+        // match /list_classes/{id} {
+        //   allow read, write: if request.auth.token.tenantId == tenantId;
+        // }
+        // match /list_coaches/{id} {
+        //   allow read, write: if request.auth.token.tenantId == tenantId;
+        // }
+        // match /list_tags/{id} {
+        //   allow read, write: if request.auth.token.tenantId == tenantId;
+        // }
+        match /{tbl}/{id} {
+          allow read, write: if request.auth.token.tenantId == tenantId;
+        }
+      }
+    }
+
+
+  }
+}
