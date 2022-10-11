@@ -8,6 +8,7 @@ import { openDB } from 'idb';
 let idb = null
 
 const idbName = 'littera-lis-43a10'
+const mapsApiKey = 'AIzaSyAzKZxdctXyh-JLO_xBvFBJx_TPXgGJYHI'
 
 console.log('STATE state.js pred getAuth')
 

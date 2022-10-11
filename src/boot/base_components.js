@@ -13,6 +13,16 @@ import DBWidgetType from "src/components/base/DBWidgetType.vue";
 
 import DBAvatar from "src/components/base/DBAvatar.vue";
 
+//import BarcodeInput from "src/components/base/BarcodeInput.vue";
+import BarQrCodeInputNative from "src/components/base/BarQrCodeInputNative.vue";
+import BarcodeOutput from "src/components/base/BarcodeOutput.vue";
+import QrCodeOutput from "src/components/base/QrCodeOutput.vue";
+import BlePresence from "src/components/base/BlePresence.vue";
+
+
+import YearCalendar from "src/components/base/YearCalendar.vue";
+
+
 export default ({ app }) => {
   // const importList = import.meta.glob('../components/base/*.vue')
 
@@ -39,4 +49,14 @@ export default ({ app }) => {
   app.component("DBWidgetType", DBWidgetType);
 
   app.component("DBAvatar", DBAvatar);
+
+  //app.component("BarcodeInput", BarcodeInput);
+  app.component("BarQrCodeInputNative", BarQrCodeInputNative);
+  app.component("BarcodeOutput", BarcodeOutput);
+  app.component("QrCodeOutput", QrCodeOutput);
+
+  app.component("BlePresence", BlePresence);
+
+  app.component("YearCalendar", YearCalendar);
+
 }

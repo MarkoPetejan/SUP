@@ -44,7 +44,7 @@ if (route.params?.pid) watch(
       <q-table
         row-key="_id"
         :title="c.title"
-        :rows="(c.filteredRows || c.rows).filter(o => {
+        :rows="(c.filteredRows || c.rows)?.filter(o => {
           if (!route.params?.pid) return true
           return o._pid == route.params.pid
         })"
